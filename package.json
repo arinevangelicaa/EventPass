@@ -1,0 +1,12 @@
+{
+  "name": "eventpass",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start:events": "node services/events/server.js",
+    "start:registrations": "node services/registrations/server.js",
+    "test": "node --test"
+  }
+}

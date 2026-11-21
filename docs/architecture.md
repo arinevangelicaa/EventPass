@@ -7,29 +7,33 @@ dalam lab CI/CD AWS Academy.
 ## Alur aplikasi dan penyimpanan
 
 ```mermaid
-flowchart TD
+flowchart LR
     user["Penguji melalui AWS Cloud9"]
+
     subgraph aws["AWS us-east-1"]
         subgraph vpc["LabVPC"]
             subgraph subnet["Public Subnet1"]
                 subgraph ec2["EC2 Cloud9 · t3.small"]
                     terminal["Terminal Cloud9 · curl"]
+
                     subgraph network["Docker network · eventpass-network"]
-                        event["Event Service · port 3000"]
                         registration["Registration Service · port 3001"]
+                        event["Event Service · port 3000"]
                     end
-                    eventdb[("SQLite events · Docker volume")]
+
                     registrationdb[("SQLite registrations · Docker volume")]
+                    eventdb[("SQLite events · Docker volume")]
                 end
             end
         end
     end
+
     user --> terminal
-    terminal -->|"HTTP localhost:3000 · CRUD acara"| event
     terminal -->|"HTTP localhost:3001 · pendaftaran"| registration
+    terminal -->|"HTTP localhost:3000 · CRUD acara"| event
     registration -->|"GET /events/{id} · validasi acara open"| event
-    event --> eventdb
     registration --> registrationdb
+    event --> eventdb
 ```
 
 Setiap service memiliki database dan volume sendiri pada penyimpanan
@@ -47,6 +51,7 @@ flowchart TD
     identity["Identitas sementara lab · assumed role voclabs"]
     ecr["Amazon ECR private · eventpass-event-service:week12"]
     runtime["EC2 Cloud9 · Docker container"]
+
     github -->|"git clone"| build
     identity -->|"Otorisasi AWS CLI untuk ECR"| build
     build -->|"Login dan push melalui HTTPS"| ecr

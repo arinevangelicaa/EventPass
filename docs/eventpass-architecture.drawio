@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="YCy51ZSOFPAyaL6OZYzs">
+    <mxGraphModel dx="1477" dy="1362" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=0;align=left;fontSize=24;fontStyle=1;fontColor=#232F3E;" value="EventPass — Arsitektur AWS Track B" vertex="1">
+          <mxGeometry height="40" width="1400" x="30" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="aws" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#232F3E;strokeWidth=2;verticalAlign=top;align=left;spacingTop=12;spacingLeft=18;fontSize=17;fontStyle=1;fontColor=#232F3E;" value="AWS Cloud / us-east-1" vertex="1">
+          <mxGeometry height="760" width="1390" x="260" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="vpc" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#F8F5FC;strokeColor=#8C4FFF;strokeWidth=2;verticalAlign=top;align=left;spacingTop=12;spacingLeft=18;fontSize=15;fontStyle=1;fontColor=#6931A6;" value="Amazon VPC / LabVPC" vertex="1">
+          <mxGeometry height="470" width="1330" x="290" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="subnet" parent="1" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#F5FAF2;strokeColor=#7AA116;strokeWidth=2;verticalAlign=top;align=left;spacingTop=12;spacingLeft=18;fontSize=14;fontStyle=1;fontColor=#4E6E13;" value="Public Subnet1 / us-east-1a" vertex="1">
+          <mxGeometry height="400" width="1290" x="310" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="host" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=0;fillColor=#FFFAF3;strokeColor=#ED7100;strokeWidth=2;verticalAlign=top;align=left;spacingTop=15;spacingLeft=80;fontSize=15;fontStyle=1;fontColor=#9D4800;" value="Amazon EC2 / Cloud9 MicroservicesIDE / t3.small" vertex="1">
+          <mxGeometry height="330" width="1250" x="330" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="ec2icon" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;fillColor=#ED7100;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="350" y="462" as="geometry" />
+        </mxCell>
+        <mxCell id="network" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F0F7FF;strokeColor=#147EBA;dashed=1;verticalAlign=top;align=left;spacingTop=12;spacingLeft=15;fontSize=13;fontStyle=1;fontColor=#12618D;" value="Docker network / eventpass-network" vertex="1">
+          <mxGeometry height="210" width="535" x="700" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="github" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#F3F4F5;strokeColor=#545B64;fontSize=14;" value="GitHub / EventPasss&#xa;Source code dan Dockerfile" vertex="1">
+          <mxGeometry height="90" width="200" x="30" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="user" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#232F3E;strokeColor=#232F3E;fontColor=#FFFFFF;fontSize=15;" value="Penguji&#xa;Browser AWS Cloud9" vertex="1">
+          <mxGeometry height="80" width="200" x="30" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="ecr" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF1E3;strokeColor=#ED7100;strokeWidth=2;fontColor=#9D4800;fontSize=15;" value="Amazon ECR / Private registry&#xa;&#xa;eventpass-event-service:week12" vertex="1">
+          <mxGeometry height="100" width="390" x="760" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="iam" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FDECF2;strokeColor=#DD344C;fontColor=#992538;fontSize=14;" value="IAM / Identitas sementara lab&#xa;&#xa;Assumed role voclabs&#xa;Otorisasi push dan pull ECR" vertex="1">
+          <mxGeometry height="120" width="300" x="1260" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="build" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#ED7100;fontSize=14;" value="Docker build&#xa;Event Service image" vertex="1">
+          <mxGeometry height="65" width="210" x="410" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="terminal" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#ED7100;fontSize=14;" value="Terminal Cloud9&#xa;curl" vertex="1">
+          <mxGeometry height="65" width="210" x="410" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="registration" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#147EBA;strokeWidth=2;fontSize=14;" value="Registration Service&#xa;&#xa;Port 3001" vertex="1">
+          <mxGeometry height="80" width="190" x="730" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="events" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#147EBA;strokeWidth=2;fontSize=14;" value="Event Service&#xa;&#xa;Port 3000" vertex="1">
+          <mxGeometry height="80" width="180" x="1025" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="registrationdb" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=0;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#FFFFFF;strokeColor=#545B64;fontSize=13;" value="SQLite registrations&#xa;Docker volume" vertex="1">
+          <mxGeometry height="80" width="220" x="1320" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="eventsdb" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=0;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#FFFFFF;strokeColor=#545B64;fontSize=13;" value="SQLite events&#xa;Docker volume" vertex="1">
+          <mxGeometry height="80" width="220" x="1320" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="clone" edge="1" parent="1" source="github" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=0;endArrow=block;strokeColor=#545B64;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="build" value="git clone">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="515" y="225" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="push" edge="1" parent="1" source="build" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=0;endArrow=block;strokeColor=#ED7100;strokeWidth=2;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0.25;entryY=1;" target="ecr" value="Push image / HTTPS">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="547" />
+              <mxPoint x="660" y="320" />
+              <mxPoint x="857" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pull" edge="1" parent="1" source="ecr" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=0;endArrow=block;strokeColor=#ED7100;strokeWidth=2;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0.9;exitY=1;entryX=0.5;entryY=0;" target="events" value="Pull image / HTTPS">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1111" y="320" />
+              <mxPoint x="1255" y="320" />
+              <mxPoint x="1255" y="520" />
+              <mxPoint x="1115" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="authorization" edge="1" parent="1" source="iam" style="edgeStyle=orthogonalEdgeStyle;html=0;dashed=1;endArrow=open;strokeColor=#DD344C;fontSize=12;labelBackgroundColor=#FFFFFF;" target="ecr" value="AWS CLI / ECR">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="access" edge="1" parent="1" source="user" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=0;endArrow=block;strokeColor=#545B64;fontSize=12;labelBackgroundColor=#FFFFFF;" target="terminal" value="Akses Cloud9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="registerrequest" edge="1" parent="1" source="terminal" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=0;endArrow=block;strokeColor=#147EBA;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="registration" value="HTTP 3001">
+          <mxGeometry relative="1" y="-14" as="geometry" />
+        </mxCell>
+        <mxCell id="validation" edge="1" parent="1" source="registration" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=0;endArrow=block;strokeColor=#147EBA;fontSize=11;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="events" value="GET /events/{id}&#xa;Acara open">
+          <mxGeometry relative="1" y="-20" as="geometry" />
+        </mxCell>
+        <mxCell id="crud" edge="1" parent="1" source="terminal" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=0;endArrow=block;strokeColor=#147EBA;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=1;" target="events" value="HTTP 3000 / CRUD acara">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="515" y="725" />
+              <mxPoint x="1115" y="725" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="regstore" edge="1" parent="1" source="registration" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=0;endArrow=block;strokeColor=#545B64;exitX=0.5;exitY=0;entryX=0;entryY=0.5;" target="registrationdb" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="825" y="585" />
+              <mxPoint x="1280" y="585" />
+              <mxPoint x="1280" y="575" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eventstore" edge="1" parent="1" source="events" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=0;endArrow=block;strokeColor=#545B64;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="eventsdb" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1290" y="650" />
+              <mxPoint x="1290" y="710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" parent="1" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=13;fontColor=#545B64;" value="Pengujian API melalui terminal Cloud9 ke localhost. Port host 3000 dan 3001 diikat ke 127.0.0.1. Data tiap service disimpan pada volume terpisah di disk EC2." vertex="1">
+          <mxGeometry height="40" width="1330" x="290" y="875" as="geometry" />
+        </mxCell>
+        <mxCell id="securitynote" parent="1" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=13;fontColor=#545B64;" value="Security group host mengikuti konfigurasi Cloud9. Akses ECR memakai kredensial sementara lab dengan assumed role voclabs. Instance role EC2 terpasang: tidak ada." vertex="1">
+          <mxGeometry height="40" width="1330" x="290" y="925" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
